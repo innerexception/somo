@@ -1,5 +1,5 @@
 define([], function(){
-   var jobKiosk = function(x, y, somoManager){
+   var jobKiosk = function(somoManager, x, y){
        this.somoManager = somoManager;
        this.x = x;
        this.y = y;
@@ -25,5 +25,5 @@ define([], function(){
        }
    }
 
-   return jobKoisk;
+   return jobKiosk;
 });

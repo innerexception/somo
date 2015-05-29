@@ -1,4 +1,4 @@
-define(['phaser', 'debtor', 'debt', 'kiosk'], function(Phaser, Debtor, Debt, Kiosk){
+define(['phaser', 'debtor', 'debt', 'jobKiosk', 'choiceGroup'], function(Phaser, Debtor, Debt, Kiosk, ChoiceGroup){
 
     var SoMoManager = {};
 
@@ -58,9 +58,8 @@ define(['phaser', 'debtor', 'debt', 'kiosk'], function(Phaser, Debtor, Debt, Kio
 
         SoMoManager.cursors = SoMoManager.game.input.keyboard.createCursorKeys();
 
-        SoMoManager.schoolKiosk = new Kiosk(SoMoManager, 10, 500);
-        SoMoManager.schoolKiosk.showMenu('family');
-
+        SoMoManager.startingChoiceGroup = new ChoiceGroup(SoMoManager, 10, 500, 'family');
+        SoMoManager.startingChoiceGroup.showMenu('family');
     }
 
     SoMoManager.removeLogo = function(){
